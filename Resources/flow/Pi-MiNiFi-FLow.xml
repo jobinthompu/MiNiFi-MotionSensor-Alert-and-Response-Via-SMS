@@ -1,0 +1,505 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.1">
+  <description>Pi-MiNiFi-FLow</description>
+  <groupId>64a1630b-015b-1000-ca49-04f9c18636e1</groupId>
+  <name>Pi-MiNiFi-FLow</name>
+  <snippet>
+    <connections>
+      <id>b102aef3-b0ba-3426-0000-000000000000</id>
+      <parentGroupId>97899f8a-aa18-3833-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>97899f8a-aa18-3833-0000-000000000000</groupId>
+        <id>6d876bd3-7d24-3eb7-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>97899f8a-aa18-3833-0000-000000000000</groupId>
+        <id>149ee177-bb83-3660-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>36418d4a-ca3c-39c2-0000-000000000000</id>
+      <parentGroupId>97899f8a-aa18-3833-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>97899f8a-aa18-3833-0000-000000000000</groupId>
+        <id>9604af2b-7eda-3f91-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>97899f8a-aa18-3833-0000-000000000000</groupId>
+        <id>50f5c9c3-2349-3008-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>76b28963-1cd5-38f2-0000-000000000000</id>
+      <parentGroupId>97899f8a-aa18-3833-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>8508d5e9-8d5a-3898-0000-000000000000</groupId>
+        <id>015b1004-6b7d-1225-ea82-09238660ca05</id>
+        <type>REMOTE_INPUT_PORT</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>output stream</selectedRelationships>
+      <source>
+        <groupId>97899f8a-aa18-3833-0000-000000000000</groupId>
+        <id>6d876bd3-7d24-3eb7-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <processors>
+      <id>9604af2b-7eda-3f91-0000-000000000000</id>
+      <parentGroupId>97899f8a-aa18-3833-0000-000000000000</parentGroupId>
+      <position>
+        <x>671.8627437087399</x>
+        <y>65.48864539265833</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Command Arguments</key>
+            <value>
+              <name>Command Arguments</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Command Path</key>
+            <value>
+              <name>Command Path</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore STDIN</key>
+            <value>
+              <name>Ignore STDIN</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Working Directory</key>
+            <value>
+              <name>Working Directory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Argument Delimiter</key>
+            <value>
+              <name>Argument Delimiter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Output Destination Attribute</key>
+            <value>
+              <name>Output Destination Attribute</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Attribute Length</key>
+            <value>
+              <name>Max Attribute Length</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Command Arguments</key>
+            <value>/root/alarm.py</value>
+          </entry>
+          <entry>
+            <key>Command Path</key>
+            <value>python</value>
+          </entry>
+          <entry>
+            <key>Ignore STDIN</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Working Directory</key>
+          </entry>
+          <entry>
+            <key>Argument Delimiter</key>
+            <value>;</value>
+          </entry>
+          <entry>
+            <key>Output Destination Attribute</key>
+          </entry>
+          <entry>
+            <key>Max Attribute Length</key>
+            <value>256</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>ExecuteStreamCommand</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>original</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>output stream</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
+    </processors>
+    <processors>
+      <id>149ee177-bb83-3660-0000-000000000000</id>
+      <parentGroupId>97899f8a-aa18-3833-0000-000000000000</parentGroupId>
+      <position>
+        <x>19.687546798276344</x>
+        <y>0.0</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>File Size</key>
+            <value>
+              <name>File Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>
+              <name>Batch Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Data Format</key>
+            <value>
+              <name>Data Format</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Unique FlowFiles</key>
+            <value>
+              <name>Unique FlowFiles</name>
+            </value>
+          </entry>
+          <entry>
+            <key>generate-ff-custom-text</key>
+            <value>
+              <name>generate-ff-custom-text</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>File Size</key>
+            <value>1 b</value>
+          </entry>
+          <entry>
+            <key>Batch Size</key>
+            <value>1</value>
+          </entry>
+          <entry>
+            <key>Data Format</key>
+            <value>Binary</value>
+          </entry>
+          <entry>
+            <key>Unique FlowFiles</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>generate-ff-custom-text</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>10 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>GenerateFlowFile</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+    </processors>
+    <processors>
+      <id>50f5c9c3-2349-3008-0000-000000000000</id>
+      <parentGroupId>97899f8a-aa18-3833-0000-000000000000</parentGroupId>
+      <position>
+        <x>677.7759440174183</x>
+        <y>397.6110097377755</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Base Path</key>
+            <value>
+              <name>Base Path</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Listening Port</key>
+            <value>
+              <name>Listening Port</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Data to Receive per Second</key>
+            <value>
+              <name>Max Data to Receive per Second</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>SSL Context Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Authorized DN Pattern</key>
+            <value>
+              <name>Authorized DN Pattern</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Unconfirmed Flowfile Time</key>
+            <value>
+              <name>Max Unconfirmed Flowfile Time</name>
+            </value>
+          </entry>
+          <entry>
+            <key>HTTP Headers to receive as Attributes (Regex)</key>
+            <value>
+              <name>HTTP Headers to receive as Attributes (Regex)</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Base Path</key>
+            <value>contentListener</value>
+          </entry>
+          <entry>
+            <key>Listening Port</key>
+            <value>8033</value>
+          </entry>
+          <entry>
+            <key>Max Data to Receive per Second</key>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+          </entry>
+          <entry>
+            <key>Authorized DN Pattern</key>
+            <value>.*</value>
+          </entry>
+          <entry>
+            <key>Max Unconfirmed Flowfile Time</key>
+            <value>60 secs</value>
+          </entry>
+          <entry>
+            <key>HTTP Headers to receive as Attributes (Regex)</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>ListenHTTP</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.ListenHTTP</type>
+    </processors>
+    <processors>
+      <id>6d876bd3-7d24-3eb7-0000-000000000000</id>
+      <parentGroupId>97899f8a-aa18-3833-0000-000000000000</parentGroupId>
+      <position>
+        <x>19.175114819988607</x>
+        <y>219.45054463272027</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Command Arguments</key>
+            <value>
+              <name>Command Arguments</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Command Path</key>
+            <value>
+              <name>Command Path</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Ignore STDIN</key>
+            <value>
+              <name>Ignore STDIN</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Working Directory</key>
+            <value>
+              <name>Working Directory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Argument Delimiter</key>
+            <value>
+              <name>Argument Delimiter</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Output Destination Attribute</key>
+            <value>
+              <name>Output Destination Attribute</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Attribute Length</key>
+            <value>
+              <name>Max Attribute Length</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Command Arguments</key>
+            <value>/root/pirtest.py</value>
+          </entry>
+          <entry>
+            <key>Command Path</key>
+            <value>python</value>
+          </entry>
+          <entry>
+            <key>Ignore STDIN</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Working Directory</key>
+          </entry>
+          <entry>
+            <key>Argument Delimiter</key>
+            <value>;</value>
+          </entry>
+          <entry>
+            <key>Output Destination Attribute</key>
+          </entry>
+          <entry>
+            <key>Max Attribute Length</key>
+            <value>256</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>ExecuteStreamCommand</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>original</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>output stream</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.ExecuteStreamCommand</type>
+    </processors>
+    <remoteProcessGroups>
+      <id>8508d5e9-8d5a-3898-0000-000000000000</id>
+      <parentGroupId>97899f8a-aa18-3833-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>455.8486455001862</y>
+      </position>
+      <communicationsTimeout>30 sec</communicationsTimeout>
+      <contents>
+        <inputPorts>
+          <comments></comments>
+          <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+          <connected>true</connected>
+          <exists>true</exists>
+          <id>015b1004-6b7d-1225-ea82-09238660ca05</id>
+          <name>from-Pi-With-Love</name>
+          <targetRunning>true</targetRunning>
+          <transmitting>true</transmitting>
+          <useCompression>false</useCompression>
+        </inputPorts>
+      </contents>
+      <proxyHost></proxyHost>
+      <proxyUser></proxyUser>
+      <targetUri>http://192.168.1.64:9090/nifi</targetUri>
+      <targetUris>http://192.168.1.64:9090/nifi</targetUris>
+      <transportProtocol>HTTP</transportProtocol>
+      <yieldDuration>10 sec</yieldDuration>
+    </remoteProcessGroups>
+  </snippet>
+  <timestamp>05/11/2017 10:47:25 PDT</timestamp>
+</template>

@@ -1,0 +1,929 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.1">
+  <description>MiNiFi-MotionSensor-SMS-Alert+Response.xml</description>
+  <groupId>f4be2a50-015b-1000-b9e5-1db186d87d9d</groupId>
+  <name>MiNiFi-MotionSensor-SMS-Alert+Response.xml</name>
+  <snippet>
+    <connections>
+      <id>cd27c95b-be71-3f55-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>2eee95bd-5642-3b8a-0000-000000000000</groupId>
+        <id>89c0b240-c1e3-36bb-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <source>
+        <groupId>2eee95bd-5642-3b8a-0000-000000000000</groupId>
+        <id>a2c83868-1767-3812-0000-000000000000</id>
+        <type>INPUT_PORT</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>da9e6692-d4e8-3067-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>2eee95bd-5642-3b8a-0000-000000000000</groupId>
+        <id>3cee772d-7125-3b0a-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>2eee95bd-5642-3b8a-0000-000000000000</groupId>
+        <id>a2260b15-e141-30c4-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>dce051aa-5748-33f1-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>2eee95bd-5642-3b8a-0000-000000000000</groupId>
+        <id>a2260b15-e141-30c4-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>10 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>nonZero</selectedRelationships>
+      <source>
+        <groupId>2eee95bd-5642-3b8a-0000-000000000000</groupId>
+        <id>89c0b240-c1e3-36bb-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>e5e7865c-b1af-30af-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>2eee95bd-5642-3b8a-0000-000000000000</groupId>
+        <id>5d36af77-a53e-3a6e-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>success</selectedRelationships>
+      <source>
+        <groupId>2eee95bd-5642-3b8a-0000-000000000000</groupId>
+        <id>02c6d7ad-6248-33e4-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>00f7c21f-0b38-3463-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>2eee95bd-5642-3b8a-0000-000000000000</groupId>
+        <id>b6806334-e5cf-3892-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>ALERT</selectedRelationships>
+      <source>
+        <groupId>2eee95bd-5642-3b8a-0000-000000000000</groupId>
+        <id>5d36af77-a53e-3a6e-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <inputPorts>
+      <id>a2c83868-1767-3812-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <position>
+        <x>71.59576674333289</x>
+        <y>46.39500128790269</y>
+      </position>
+      <comments></comments>
+      <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+      <name>Copy of from-Pi-With-Love</name>
+      <state>STOPPED</state>
+      <transmitting>false</transmitting>
+      <type>INPUT_PORT</type>
+    </inputPorts>
+    <labels>
+      <id>ff8c65c5-aa38-38bd-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <height>358.1622009277344</height>
+      <label>Flow 1:: Receiving Sensor Alert from MiNiFi and send SMS</label>
+      <style>
+        <entry>
+          <key>background-color</key>
+          <value>#339c09</value>
+        </entry>
+        <entry>
+          <key>font-size</key>
+          <value>16px</value>
+        </entry>
+      </style>
+      <width>1521.883544921875</width>
+    </labels>
+    <labels>
+      <id>0c77e99b-307e-308e-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <position>
+        <x>2.4949951171875</x>
+        <y>380.341796875</y>
+      </position>
+      <height>253.80250549316406</height>
+      <label>Flow 2:: check for ALARM request and send signal to MiNiFi</label>
+      <style>
+        <entry>
+          <key>font-size</key>
+          <value>16px</value>
+        </entry>
+      </style>
+      <width>1520.572998046875</width>
+    </labels>
+    <processors>
+      <id>89c0b240-c1e3-36bb-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <position>
+        <x>573.3591121668508</x>
+        <y>13.668559008681314</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Routing Strategy</key>
+            <value>
+              <name>Routing Strategy</name>
+            </value>
+          </entry>
+          <entry>
+            <key>nonZero</key>
+            <value>
+              <name>nonZero</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Routing Strategy</key>
+            <value>Route to Property name</value>
+          </entry>
+          <entry>
+            <key>nonZero</key>
+            <value>${fileSize:gt(0)}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>RouteOnAttribute</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>nonZero</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>unmatched</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
+    </processors>
+    <processors>
+      <id>a2260b15-e141-30c4-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <position>
+        <x>1139.8312991501728</x>
+        <y>11.341574673272817</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Rate Control Criteria</key>
+            <value>
+              <name>Rate Control Criteria</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Maximum Rate</key>
+            <value>
+              <name>Maximum Rate</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Rate Controlled Attribute</key>
+            <value>
+              <name>Rate Controlled Attribute</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Time Duration</key>
+            <value>
+              <name>Time Duration</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Grouping Attribute</key>
+            <value>
+              <name>Grouping Attribute</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Rate Control Criteria</key>
+            <value>flowfile count</value>
+          </entry>
+          <entry>
+            <key>Maximum Rate</key>
+            <value>1</value>
+          </entry>
+          <entry>
+            <key>Rate Controlled Attribute</key>
+          </entry>
+          <entry>
+            <key>Time Duration</key>
+            <value>1 min</value>
+          </entry>
+          <entry>
+            <key>Grouping Attribute</key>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>ControlRate</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.ControlRate</type>
+    </processors>
+    <processors>
+      <id>b6806334-e5cf-3892-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <position>
+        <x>1157.229823680071</x>
+        <y>466.6822857461452</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>URL</key>
+            <value>
+              <name>URL</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Batch Size</key>
+            <value>
+              <name>Max Batch Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Max Data to Post per Second</key>
+            <value>
+              <name>Max Data to Post per Second</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+            <value>
+              <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+              <name>SSL Context Service</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Username</key>
+            <value>
+              <name>Username</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Password</key>
+            <value>
+              <name>Password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Send as FlowFile</key>
+            <value>
+              <name>Send as FlowFile</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Use Chunked Encoding</key>
+            <value>
+              <name>Use Chunked Encoding</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Compression Level</key>
+            <value>
+              <name>Compression Level</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Connection Timeout</key>
+            <value>
+              <name>Connection Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Data Timeout</key>
+            <value>
+              <name>Data Timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Attributes to Send as HTTP Headers (Regex)</key>
+            <value>
+              <name>Attributes to Send as HTTP Headers (Regex)</name>
+            </value>
+          </entry>
+          <entry>
+            <key>User Agent</key>
+            <value>
+              <name>User Agent</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Host</key>
+            <value>
+              <name>Proxy Host</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
+            <value>
+              <name>Proxy Port</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Content-Type</key>
+            <value>
+              <name>Content-Type</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>URL</key>
+            <value>http://&lt;YOUR_HOST&gt;:8033/contentListener</value>
+          </entry>
+          <entry>
+            <key>Max Batch Size</key>
+            <value>100 MB</value>
+          </entry>
+          <entry>
+            <key>Max Data to Post per Second</key>
+          </entry>
+          <entry>
+            <key>SSL Context Service</key>
+          </entry>
+          <entry>
+            <key>Username</key>
+          </entry>
+          <entry>
+            <key>Password</key>
+          </entry>
+          <entry>
+            <key>Send as FlowFile</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Use Chunked Encoding</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Compression Level</key>
+            <value>0</value>
+          </entry>
+          <entry>
+            <key>Connection Timeout</key>
+            <value>30 sec</value>
+          </entry>
+          <entry>
+            <key>Data Timeout</key>
+            <value>30 sec</value>
+          </entry>
+          <entry>
+            <key>Attributes to Send as HTTP Headers (Regex)</key>
+          </entry>
+          <entry>
+            <key>User Agent</key>
+            <value>Apache-HttpClient/4.4.1 (Java/1.8.0_65)</value>
+          </entry>
+          <entry>
+            <key>Proxy Host</key>
+          </entry>
+          <entry>
+            <key>Proxy Port</key>
+          </entry>
+          <entry>
+            <key>Content-Type</key>
+            <value>${mime.type}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>PostHTTP</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.PostHTTP</type>
+    </processors>
+    <processors>
+      <id>02c6d7ad-6248-33e4-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <position>
+        <x>21.105023230602</x>
+        <y>464.9378127652558</y>
+      </position>
+      <bundle>
+        <artifact>nifi-email-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>host</key>
+            <value>
+              <name>host</name>
+            </value>
+          </entry>
+          <entry>
+            <key>port</key>
+            <value>
+              <name>port</name>
+            </value>
+          </entry>
+          <entry>
+            <key>user</key>
+            <value>
+              <name>user</name>
+            </value>
+          </entry>
+          <entry>
+            <key>password</key>
+            <value>
+              <name>password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>folder</key>
+            <value>
+              <name>folder</name>
+            </value>
+          </entry>
+          <entry>
+            <key>fetch.size</key>
+            <value>
+              <name>fetch.size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>delete.messages</key>
+            <value>
+              <name>delete.messages</name>
+            </value>
+          </entry>
+          <entry>
+            <key>connection.timeout</key>
+            <value>
+              <name>connection.timeout</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Mark Messages as Read</key>
+            <value>
+              <name>Mark Messages as Read</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Use SSL</key>
+            <value>
+              <name>Use SSL</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>host</key>
+            <value>&lt;YOUR_MAIL_SERVER&gt;</value>
+          </entry>
+          <entry>
+            <key>port</key>
+            <value>143</value>
+          </entry>
+          <entry>
+            <key>user</key>
+            <value>jgeorge@hortonworks.com</value>
+          </entry>
+          <entry>
+            <key>password</key>
+          </entry>
+          <entry>
+            <key>folder</key>
+            <value>Inbox/ALERTS [OR YOUR CUSTOM FOLDER]</value>
+          </entry>
+          <entry>
+            <key>fetch.size</key>
+            <value>1</value>
+          </entry>
+          <entry>
+            <key>delete.messages</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>connection.timeout</key>
+            <value>30 sec</value>
+          </entry>
+          <entry>
+            <key>Mark Messages as Read</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Use SSL</key>
+            <value>false</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Check-For-Alert-Request</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.email.ConsumeIMAP</type>
+    </processors>
+    <processors>
+      <id>3cee772d-7125-3b0a-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <position>
+        <x>1141.445194779649</x>
+        <y>210.59376807412764</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>SMTP Hostname</key>
+            <value>
+              <name>SMTP Hostname</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SMTP Port</key>
+            <value>
+              <name>SMTP Port</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SMTP Username</key>
+            <value>
+              <name>SMTP Username</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SMTP Password</key>
+            <value>
+              <name>SMTP Password</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SMTP Auth</key>
+            <value>
+              <name>SMTP Auth</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SMTP TLS</key>
+            <value>
+              <name>SMTP TLS</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SMTP Socket Factory</key>
+            <value>
+              <name>SMTP Socket Factory</name>
+            </value>
+          </entry>
+          <entry>
+            <key>SMTP X-Mailer Header</key>
+            <value>
+              <name>SMTP X-Mailer Header</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Content Type</key>
+            <value>
+              <name>Content Type</name>
+            </value>
+          </entry>
+          <entry>
+            <key>From</key>
+            <value>
+              <name>From</name>
+            </value>
+          </entry>
+          <entry>
+            <key>To</key>
+            <value>
+              <name>To</name>
+            </value>
+          </entry>
+          <entry>
+            <key>CC</key>
+            <value>
+              <name>CC</name>
+            </value>
+          </entry>
+          <entry>
+            <key>BCC</key>
+            <value>
+              <name>BCC</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Subject</key>
+            <value>
+              <name>Subject</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Message</key>
+            <value>
+              <name>Message</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Attach File</key>
+            <value>
+              <name>Attach File</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Include All Attributes In Message</key>
+            <value>
+              <name>Include All Attributes In Message</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>SMTP Hostname</key>
+            <value>&lt;YOUR_MAIL_SERVER&gt;</value>
+          </entry>
+          <entry>
+            <key>SMTP Port</key>
+            <value>587</value>
+          </entry>
+          <entry>
+            <key>SMTP Username</key>
+            <value>&lt;YOUR_USER_NAME&gt;</value>
+          </entry>
+          <entry>
+            <key>SMTP Password</key>
+          </entry>
+          <entry>
+            <key>SMTP Auth</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>SMTP TLS</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>SMTP Socket Factory</key>
+            <value>javax.net.ssl.SSLSocketFactory</value>
+          </entry>
+          <entry>
+            <key>SMTP X-Mailer Header</key>
+            <value>NiFi</value>
+          </entry>
+          <entry>
+            <key>Content Type</key>
+            <value>text/plain</value>
+          </entry>
+          <entry>
+            <key>From</key>
+            <value>&lt;FROM_ADDRESS&gt;</value>
+          </entry>
+          <entry>
+            <key>To</key>
+            <value>&lt;YOUR_NUMBER&gt;@&lt;YOUR_SERVICE_PROVIDER&gt;.com</value>
+          </entry>
+          <entry>
+            <key>CC</key>
+          </entry>
+          <entry>
+            <key>BCC</key>
+          </entry>
+          <entry>
+            <key>Subject</key>
+            <value>Intruder Detected</value>
+          </entry>
+          <entry>
+            <key>Message</key>
+            <value>reply ALARM to activate sound alarm</value>
+          </entry>
+          <entry>
+            <key>Attach File</key>
+            <value>false</value>
+          </entry>
+          <entry>
+            <key>Include All Attributes In Message</key>
+            <value>false</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>Send-SMS</name>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.PutEmail</type>
+    </processors>
+    <processors>
+      <id>5d36af77-a53e-3a6e-0000-000000000000</id>
+      <parentGroupId>2eee95bd-5642-3b8a-0000-000000000000</parentGroupId>
+      <position>
+        <x>589.3612488165393</x>
+        <y>463.09900661291204</y>
+      </position>
+      <bundle>
+        <artifact>nifi-standard-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Match Requirement</key>
+            <value>
+              <name>Match Requirement</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Character Set</key>
+            <value>
+              <name>Character Set</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Content Buffer Size</key>
+            <value>
+              <name>Content Buffer Size</name>
+            </value>
+          </entry>
+          <entry>
+            <key>ALERT</key>
+            <value>
+              <name>ALERT</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Match Requirement</key>
+            <value>content must contain match</value>
+          </entry>
+          <entry>
+            <key>Character Set</key>
+            <value>UTF-8</value>
+          </entry>
+          <entry>
+            <key>Content Buffer Size</key>
+            <value>1 MB</value>
+          </entry>
+          <entry>
+            <key>ALERT</key>
+            <value>(\W|^)6692XXXXX.* [Update your Filter Here]</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>RouteOnContent</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>ALERT</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>true</autoTerminate>
+        <name>unmatched</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.RouteOnContent</type>
+    </processors>
+  </snippet>
+  <timestamp>05/12/2017 15:06:17 PDT</timestamp>
+</template>

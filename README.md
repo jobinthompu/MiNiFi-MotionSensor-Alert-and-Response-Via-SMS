@@ -10,13 +10,13 @@ Here is a small Article on how to use MiNiFi & NiFi on a Raspberry Pi to detect 
 
 - Here you can view the screen recording session that Demonstrates how it works!
 
-[![NiFi + Mac Dictation Demo](https://github.com/jobinthompu/NiFi-Mac-Dictation-Voice-Commands/blob/master/Resources/images/youTube.jpg)](https://youtu.be/tQEoCARfPso "Voice Command with Mac Dictations and NiFi - Click to Watch!")
+[![NiFi + Mac Dictation Demo](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/images/You-Tube.jpg)](https://youtu.be/_Gk1LWeGCwc "Voice Command with Mac Dictations and NiFi - Click to Watch!")
 
 
 ## Prerequisite
 
 1)	Raspberry Pi 3, a PIR motion sensor and a speaker connected to it. Details on how to connect PIR Motion Sensor to Raspberry Pi can be found in url under references.
-2)	Assuming you already have latest version of HDF/NiFi and Minifi downloaded on your Mac. Else
+2)	Assuming you already have latest version of HDF/NiFi and Minifi downloaded on your Mac and Pi. Else
 	
 Get Latest version of MiNiFi :
 	
@@ -55,9 +55,9 @@ Flow Looks like below:
 
 a)  Poll for Sensor output and Sent it to NiFi
 	
-GenerateFlowFile processor triggers every 5seconds to execute a python script pirtest.py as below using an ExecuteStreamCommand proceesor, result is sent to NiFi running on my local machine via Remote process group.
+**GenerateFlowFile** processor triggers every 5seconds to execute a python script **pirtest.py** as below using an **ExecuteStreamCommand** proceesor, result is sent to NiFi running on my local machine via Remote process group.
 
-pirtest.py script looks like below:
+**pirtest.py** script looks like below:
 
 ```
 import RPi.GPIO as GPIO
@@ -74,13 +74,13 @@ if i==1:               			#When output from motion sensor is HIGH
 
 b) Play Panic Alarm on SMS trigger from NiFi
 
-listenHTTP processor hosts and listens for any incoming flowfile, when arrived next processor ExecuteStreamCommand executes a python script alarm.py as given below which trigger a panic alarm sound to be played.  I used mpg123 to play the alarm sound, you can install it on your raspberry pi using below command:
+**listenHTTP** processor hosts and listens for any incoming flowfile, when arrived next processor **ExecuteStreamCommand** executes a python script **alarm.py** as given below which trigger a panic alarm sound to be played.  I used **mpg123** to play the alarm sound, you can install it on your raspberry pi using below command:
 
 ```
 # sudo apt-get install mpg123
 ```
 
-alarm.py script looks like below:
+**alarm.py** script looks like below:
 
 ```
 import os
@@ -98,11 +98,11 @@ os.system('mpg123 /root/alarm.mp3')
 
 a)	Receiving Sensor Alert from MiNiFi and send SMS
 	
-An InputPort receives MotionSensor output from MiNiFi, *RouteOnAttribute* processor verifies the output and send it to a *ControlRate* processor only if motion is detected. Control rate processor ensures your phone is not flooded with alerts. *putEmail* processor is configured to send SMS to my phone.
+An InputPort receives MotionSensor output from MiNiFi, **RouteOnAttribute** processor verifies the output and send it to a **ControlRate** processor only if motion is detected. Control rate processor ensures your phone is not flooded with alerts. **putEmail** processor is configured to send SMS to my phone.
 
 b)	Check for ALARM request and send signal to MiNiFi
 
-ConsumeIMAP processor checks for new ALARM request in a specified folder in my mailbox, when received, triggers a flowfile. RouteOnContent processor verifies the new mail and route it based on sender and content, feeding it to a PostHTTP processor connecting to listenHTTP on MiNiFi triggering ALARM.
+**ConsumeIMAP** processor checks for new ALARM request in a specified folder in my mailbox, when received, triggers a flowfile. **RouteOnContent** processor verifies the new mail and route it based on sender and content, feeding it to a **PostHTTP** processor connecting to **listenHTTP** on MiNiFi triggering ALARM.
 
 
 Now you its time to try out!!

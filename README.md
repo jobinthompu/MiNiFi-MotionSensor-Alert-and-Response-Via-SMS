@@ -17,17 +17,18 @@ Here is a small Article on how to use MiNiFi & NiFi on a Raspberry Pi to detect 
 
 1)	Raspberry Pi 3, a PIR motion sensor and a speaker connected to it. Details on how to connect PIR Motion Sensor to Raspberry Pi can be found in url under references.
 2)	Assuming you already have latest version of HDF/NiFi and Minifi downloaded on your Mac. Else
-	Get Latest version of MiNiFi :
+	
+Get Latest version of MiNiFi :
 	
 ```
 # wget http://apache.claz.org/nifi/minifi/0.1.0/minifi-0.1.0-bin.tar.gz
 ```
-	Get Latest version of MiNiFi ToolKit:
+Get Latest version of MiNiFi ToolKit:
 	
 ```
 # wget http://apache.claz.org/nifi/minifi/0.1.0/minifi-toolkit-0.1.0-bin.tar.gz
 ```
-	Get Latest version of NiFi:
+Get Latest version of NiFi:
 	
 ```
 # wget http://apache.claz.org/nifi/1.2.0/nifi-1.2.0-bin.tar.gz
@@ -49,7 +50,7 @@ Flow Looks like below:
 
 ![alt tag](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/images/MiNiFi-Flow.jpg)
 
-2) Flow Explained: 
+### 2) Flow Explained: 
 
 
 a)  Poll for Sensor output and Sent it to NiFi
@@ -92,11 +93,12 @@ os.system('mpg123 /root/alarm.mp3')
 
 ![alt tag](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/images/NiFi-Flow.jpg)
 
-2) Flow Explained: 
+
+### 2) Flow Explained: 
 
 a)	Receiving Sensor Alert from MiNiFi and send SMS
 	
-An InputPort receives MotionSensor output from MiNiFi, RouteOnAttribute processor verifies the output and send it to a ControlRate processor only if motion is detected. Control rate processor ensures your phone is not flooded with alerts. putEmail processor is configured to send SMS to my phone.
+An InputPort receives MotionSensor output from MiNiFi, *RouteOnAttribute* processor verifies the output and send it to a *ControlRate* processor only if motion is detected. Control rate processor ensures your phone is not flooded with alerts. *putEmail* processor is configured to send SMS to my phone.
 
 b)	Check for ALARM request and send signal to MiNiFi
 
@@ -106,7 +108,9 @@ ConsumeIMAP processor checks for new ALARM request in a specified folder in my m
 Now you its time to try out!!
 
 ## References:
+
 [Raspberry Pi and PIR Motion Sensor](https://www.raspberrypi.org/learning/parent-detector/worksheet/)
+
 [MiNiFi](https://nifi.apache.org/minifi/system-admin-guide.html)
 
 Thanks,

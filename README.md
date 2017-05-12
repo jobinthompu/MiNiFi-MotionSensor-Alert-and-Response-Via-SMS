@@ -40,7 +40,7 @@ Get Latest version of NiFi:
 
 ## Flow on MiNiFi
 
-1)	Download the flow [Pi-MiNiFi-FLow.xml](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/flow/Pi-MiNiFi-FLow.xml) and convert it to YAML format which MiNiFi uses (before you deploy make sure you have your local NiFi URL for RPG rather than what I have in there)
+Download the flow [Pi-MiNiFi-FLow.xml](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/flow/Pi-MiNiFi-FLow.xml) and convert it to YAML format which MiNiFi uses (before you deploy make sure you have your local NiFi URL for RPG rather than what I have in there)
 
 ```
 # /root/minifi-toolkit-0.1.0/bin/config.sh transform Pi-MiNiFi-FLow.xml minifi-0.1.0/conf/config.yml
@@ -50,7 +50,7 @@ Flow Looks like below:
 
 ![alt tag](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/images/MiNiFi-Flow.jpg)
 
-### 2) Flow Explained: 
+### Flow Explained: 
 
 
 a)  Poll for Sensor output and Sent it to NiFi
@@ -89,12 +89,12 @@ os.system('mpg123 /root/alarm.mp3')
 
 ## Flow on NiFi
 
-1)	Download the flow [MiNiFi-MotionSensor-SMS-Alert+Response.xml](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/flow/MiNiFi-MotionSensor-SMS-Alert%2BResponse.xml) and deploy it after updating your custom hostnames and other details details. It looks like below:
+Download the flow [MiNiFi-MotionSensor-SMS-Alert+Response.xml](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/flow/MiNiFi-MotionSensor-SMS-Alert%2BResponse.xml) and deploy it after updating your custom hostnames and other details details. It looks like below:
 
 ![alt tag](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/images/NiFi-Flow.jpg)
 
 
-### 2) Flow Explained: 
+### Flow Explained: 
 
 a)	Receiving Sensor Alert from MiNiFi and send SMS
 	

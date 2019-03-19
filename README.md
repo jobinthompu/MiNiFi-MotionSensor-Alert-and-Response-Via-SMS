@@ -10,7 +10,7 @@ Here is a small Article on how to use MiNiFi & NiFi on a Raspberry Pi to detect 
 
 - Here you can view the screen recording session that Demonstrates how it works!
 
-[![NiFi + Mac Dictation Demo](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/images/You-Tube.jpg)](https://youtu.be/_Gk1LWeGCwc "Voice Command with Mac Dictations and NiFi - Click to Watch!")
+[![NiFi + Mac Dictation Demo](https://github.com/jobinthompu/MiNiFi-MotionSensor-Alert-and-Response-Via-SMS/blob/master/Resources/images/You-Tube.jpg)](https://youtu.be/eZGntQDVghE "Voice Command with Mac Dictations and NiFi - Click to Watch!")
 
 
 ## Prerequisite
